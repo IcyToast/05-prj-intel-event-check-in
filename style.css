@@ -25,7 +25,8 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(
+  background:
+    linear-gradient(
       135deg,
       rgba(0, 153, 219, 0.9) 0%,
       rgba(0, 104, 181, 0.9) 50%,
@@ -150,6 +151,15 @@ button:hover {
 #checkInBtn {
   flex-shrink: 0;
   white-space: nowrap;
+}
+
+#resetBtn {
+  margin: 16px auto 0;
+  min-width: 120px;
+  height: 42px;
+  padding: 0 18px;
+  font-size: 14px;
+  display: flex;
 }
 
 /* Icon spacing */
@@ -348,6 +358,81 @@ select {
   color: #475569;
 }
 
+.attendee-list-section {
+  margin-top: 24px;
+  text-align: left;
+}
+
+.attendee-list-section h3 {
+  color: #64748b;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.attendee-list {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  max-height: 460px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.attendee-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.attendee-item.water {
+  background-color: #e8f7fc;
+  border-color: #bfe8f6;
+}
+
+.attendee-item.zero {
+  background-color: #ecfdf3;
+  border-color: #c7f2d8;
+}
+
+.attendee-item.power {
+  background-color: #fff7ed;
+  border-color: #fed7aa;
+}
+
+.attendee-name {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.attendee-team {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.attendee-empty {
+  text-align: center;
+  color: #94a3b8;
+  background-color: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+#addRandomBtn {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  min-width: 160px;
+  height: 44px;
+  font-size: 14px;
+  padding: 0 16px;
+  z-index: 1000;
+}
+
 /* Mobile responsive */
 @media (max-width: 768px) {
   .hero {
@@ -368,6 +453,22 @@ select {
   input,
   button {
     width: 100%;
+  }
+
+  #resetBtn {
+    width: auto;
+  }
+
+  #addRandomBtn {
+    left: 50%;
+    right: auto;
+    bottom: 12px;
+    transform: translateX(-50%);
+    width: calc(100% - 30px);
+    max-width: 320px;
+    height: 46px;
+    border-radius: 999px;
+    font-size: 15px;
   }
 
   button {
